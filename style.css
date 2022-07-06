@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header {
+    min-height: auto;
+    width: 100%; 
+    top: 0;
+    position: sticky;
+    background-color: #013880;
+}
+nav { 
+    margin-inline: 50px;
+    display: flex;
+    padding: 1px 2px;
+    align-items: center;
+}
+.header img {
+    margin-right: 10px;
+    width: 70px;
+    position: relative;
+}
+.header p {
+    font-size: 20;
+    font-weight: 600;
+    color: #fff;
+}
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    display: inline-block;
+    padding: 1px 10px;
+    position: relative;
+    list-style: none;
+}
+.nav-links ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+}
+.nav-links ul li ul a{
+    font-size: 20px;
+}
+.nav-links ul ul{
+    display: none;
+    text-align: center;
+    z-index: 1;
+}
+.nav-links ul li:hover > ul{
+    display: block;
+    background-color: #013880;   
+    position: absolute;
+}
+.nav-links ul li a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin: auto;
+    transition: 0.5s;
+    background: #ECE608;
+}
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+.content {
+    word-wrap: break-word;
+}
+.content h1 {
+    padding: 10px 50px;
+    font-size: 25;
+}
+.content div {
+    margin-inline: 50px;
+    display: block;
+    background-color: rgb(224, 224, 224);
+}
+.content div h2 {
+    padding: 20px 40px;
+    font-weight: 400;
+    text-align: left;
+    font-size: 18;
+}
+.content div p {
+    padding: 20px 40px;
+    font-weight: 400;
+    text-align: center;
+}
+.allButFooter {
+    min-height: calc(100vh - 40px);
+}
+footer {
+    display: block;
+    margin-top: 20px;
+    padding: 7px 15px;
+    background-color: rgb(214, 214, 214);
+}
