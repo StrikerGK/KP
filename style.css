@@ -7,68 +7,74 @@
 .header {
     min-height: auto;
     width: 100%; 
+    padding: 5px 50px;
     top: 0;
     position: sticky;
     background-color: #013880;
 }
 nav { 
-    margin-inline: 50px;
     display: flex;
-    padding: 1px 2px;
+    justify-content: space-between;
     align-items: center;
 }
 .header img {
-    margin-right: 10px;
     width: 70px;
+    padding-right: 5px;
     position: relative;
 }
-.header p {
-    font-size: 20;
+.header h1 {
+    flex: 1;
+    padding-left: 18px;
     font-weight: 600;
-    color: #fff;
+    color: white;
+    text-align: left;
 }
 .nav-links {
-    flex: 1;
-    text-align: right;
+    display: inline;
+    float: right;
 }
-.nav-links ul li {
-    display: inline-block;
-    padding: 1px 10px;
-    position: relative;
-    list-style: none;
-}
-.nav-links ul li a {
+.nav-links a {
+    padding: 10px 12px;
     text-decoration: none;
-    font-size: 20px;
-    color: #fff;
+    font-weight: 550;
+    font-size: 18px;
+    color: white;
 }
-.nav-links ul li ul a{
-    font-size: 20px;
+.nav-links a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
 }
-.nav-links ul ul{
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.drop-content {
     display: none;
-    text-align: center;
-    z-index: 1;
-}
-.nav-links ul li:hover > ul{
-    display: block;
-    background-color: #013880;   
     position: absolute;
+    background-color: #013880;
+    min-width: 120px;
+    text-align: center;
+    top: 34px;
+    z-index: 1;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
 }
-.nav-links ul li a::after {
-    content: '';
+.dropdown:hover .drop-content {
     display: block;
-    width: 0%;
-    height: 2px;
-    margin: auto;
-    transition: 0.5s;
-    background: #ECE608;
 }
-.nav-links ul li a:hover::after {
-    width: 100%;
+.drop-content a {
+    padding: 12px 10px;
+    border-bottom: 1px solid rgb(197, 197, 250);
+    display: block;
+    transition: all 0.5s ease !important;
+}
+.drop-btn .drop-content a:hover {
+    background-color: rgb(230, 230, 230);
+}
+.dropdown:hover .drop-btn {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 .content {
     word-wrap: break-word;
+    margin-bottom: 20px;
 }
 .content h1 {
     padding: 10px 50px;
@@ -90,12 +96,61 @@ nav {
     font-weight: 400;
     text-align: center;
 }
+.calendar {
+    text-align: center;
+    padding: 10px 50px;
+}
+.calendar iframe {
+    width: calc(95% - 5%);
+    height: calc(90% - 10%);
+    margin-inline: 5%;
+    padding: 10px 0px;
+}
+.portal {
+    min-height: calc(100vh - 40px);
+    display: block;
+    background-color: #013880;
+    align-items: center;
+    align-content: center;
+}
+.portal h1 {
+    text-align: center;
+    padding: 25px 6px;
+    font-size: 38;
+}
+.portal form {
+    padding: 20px 35px;
+    margin: auto;
+    display: block;
+    width: 480px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.portal form a {
+    display: inline-block;
+    background-color: #ECE608;
+    margin: 10px 0px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.portal form a:hover {
+    background-color: #b1ab0a;
+}
+.portal form input {
+    display: block;
+    margin: 10px 0px;
+    padding: 5px 10px;
+}
+.portal form button {
+    display: block;
+    margin: 10px 0px;
+    padding: 5px 10px;
+}
 .allButFooter {
     min-height: calc(100vh - 40px);
 }
 footer {
     display: block;
-    margin-top: 20px;
-    padding: 7px 15px;
+    padding: 7px 20px;
     background-color: rgb(214, 214, 214);
 }
