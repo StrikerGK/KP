@@ -107,8 +107,9 @@ nav {
     padding: 10px 0px;
 }
 .portal {
-    min-height: calc(100vh - 40px);
+    min-height: calc(100vh - 110px);
     display: block;
+    padding-top: 90px;
     background-color: #013880;
     align-items: center;
     align-content: center;
